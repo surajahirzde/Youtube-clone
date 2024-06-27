@@ -1,0 +1,118 @@
+.home {
+  width: calc(100vw - 250px);
+  display: inline-block;
+  background-color: #0f0f0f;
+  height: calc(100vh - 70px);
+  color: #fff;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.main.active .home {
+  width: calc(100vw - 50px);
+}
+.link {
+  overflow-x: auto;
+  height: 60px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background-color: black;
+  width: 100%;
+  padding-left: 1rem;
+  transition: 0.3s;
+}
+.search-info {
+  padding: 1rem;
+}
+.videocontainer {
+  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 20px;
+  background-color: #0f0f0f;
+  color: white;
+}
+.videocontainer .video {
+  height: 300px;
+  width: 100%;
+  box-shadow: 0 0 0 2px #222;
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+}
+
+.videocontainer .video iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+}
+
+.videocontainer .video .icon.fav {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: calc(1rem + 0.5vw);
+  z-index: 22;
+}
+.videocontainer .video .icon.fav.active,
+.videocontainer .video .icon.fav:hover {
+  color: red;
+}
+
+.videocontainer .video .videoDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 1rem;
+}
+.videocontainer .video .videoDetails h3 {
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.link div {
+  white-space: nowrap;
+  color: white;
+  text-decoration: none;
+  padding-left: 5px;
+  display: flex;
+  gap: 1.2rem;
+  width: 87%;
+  align-items: center;
+  border-radius: 8px;
+  padding: 0.3rem 0.8rem;
+  cursor: pointer;
+}
+.home .link::-webkit-scrollbar {
+  background-color: inherit;
+  height: 0px;
+}
+.link div:hover {
+  background-color: #565353;
+}
+
+/* //video player styling  */
+
+.home .videoPlayer {
+  width: 100%;
+}
+.home .videoPlayer iframe {
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .videocontainer {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .videocontainer .video {
+    height: 250px;
+  }
+  .videocontainer .video iframe {
+    height: 150px;
+  }
+  .videocontainer .video .videoDetails {
+    padding: 0.5rem;
+  }
+}

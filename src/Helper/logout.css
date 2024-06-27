@@ -1,0 +1,18 @@
+.logout {
+  position: absolute;
+  top: 100%;
+  right: 0;
+}
+
+.logout button{
+  background-color: #222;
+  padding:0.5rem 1rem;
+  color: rgb(255, 0, 0);
+  border-radius: 9px;
+  margin-top: 10px;
+  width: 100%;
+  transition: 0.3s;
+  font-weight: 500;
+  box-shadow: 0 0 0 1px rgba(252, 248, 248, 0.9), 0 2px 4px rgba(0, 0, 0, 0.9);
+  border: none;
+}

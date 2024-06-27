@@ -1,0 +1,112 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  background-color: #0f0f0f;
+  height: 70px;
+  width: 100%;
+  color: white;
+  padding: 0 2rem;
+  top: 0;
+}
+
+.barlogo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.barlogo .icon {
+  font-size: 1.5rem;
+}
+.barlogo .logo {
+  width: 110px;
+}
+.barlogo .logo #youtube-paths_yt1 path {
+  fill: white;
+}
+.search {
+  max-width: 700px;
+  width: 100%;
+  /* border: 1px red solid; */
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.search .searchbox {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  background-color: inherit;
+  border-radius: 3rem;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px rgb(255, 255, 255, 0.1);
+}
+
+.search .searchbox input {
+  width: 100%;
+  padding: 0.5rem 1.5rem;
+  background-color: transparent;
+  color: white;
+}
+.search .searchbox .icon {
+  padding: 0.3rem 1rem;
+  font-size: 1.5rem;
+  background-color: #222222;
+}
+.icon.mic {
+  background-color: #222222;
+  height: 42px;
+  width: 42px;
+  border-radius: 55px;
+  display: grid;
+  place-items: center;
+  font-size: 1.2em;
+}
+
+.profile {
+  position: relative;
+  cursor: pointer;
+}
+
+.profile img {
+  height: 40px;
+  width: 40px;
+  border-radius: 55px;
+  object-fit: cover;
+}
+.profile .icon {
+  background-color: #222222;
+  height: 40px;
+  width: 40px;
+  border-radius: 55px;
+  display: grid;
+  place-items: center;
+  font-size: 2.5rem;
+}
+@media screen and (max-width: 768px) {
+  nav {
+    padding: 0 1rem;
+  }
+  .barlogo .logo {
+    width: 90px;
+  }
+  .profile .icon{
+    width: 30px;
+    height: 30px;
+    font-size: 1.8rem;
+  }
+  .profile .icon{
+    color: red;
+  }
+  .search {
+    margin-left: 1rem;
+  }
+  .search .searchbox input{
+    padding: 0.5rem;
+  }
+  .search .searchbox .icon{
+    padding:0.3rem 0.5rem;
+    font-size: 1.2rem;
+  }
+}
